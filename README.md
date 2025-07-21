@@ -1,4 +1,4 @@
-## React + Vite + Tailwind Template 
+## Kadir Çebi Portfolio
 ### 1. Node modules add
 <code>yarn</code>
 ### 2. Project Start
