@@ -3,59 +3,47 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 text-center md:text-left max-w-5xl mx-auto">
-      <motion.h2
-        className="text-4xl font-bold text-yellow-400 mb-6"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+    <section className="min-h-screen px-6 py-16 flex flex-col-reverse md:flex-row items-center justify-center gap-10 max-w-6xl mx-auto">
+      <motion.div
+        className="w-full md:w-1/2"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
       >
-        Hakkımda
-      </motion.h2>
+        <img
+          src="/img/profile.jpg"
+          alt="Profil"
+          className="rounded-3xl shadow-lg w-full h-auto object-cover"
+        />
+      </motion.div>
 
-      <motion.p
-        className="text-gray-300 mb-10 leading-relaxed"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
+      <motion.div
+        className="w-full md:w-1/2 text-center md:text-left"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
       >
-        Merhaba! Ben Kadir Çebi. Frontend developer olarak React, JavaScript ve jQuery ile
-        kullanıcı odaklı, performanslı ve modern arayüzler geliştiriyorum. Piksel hassasiyetiyle
-        çalışan, mobil uyumlu ve hızlı siteler oluşturmak önceliğimdir. Freelance projelerde hem UI kodlama
-        hem de kullanıcı deneyimi konularında çözümler üretmeye devam ediyorum.
-      </motion.p>
+        <h2 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight text-white">
+          <span className="text-lime-400">Tutkulu bir Frontend Developer’ım</span>
+          <br /> Modern Arayüzler Kodluyorum.
+        </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-yellow-400 font-semibold text-xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="bg-gray-800 p-6 rounded-xl shadow-lg"
-        >
-          <span className="text-4xl font-bold">3+</span>
-          <p className="text-sm text-gray-400">Yıl Deneyim</p>
-        </motion.div>
+        <p className="text-gray-400 mb-6">
+          Merhaba, ben Kadir. React, JavaScript ve jQuery kullanarak modern,
+          performans odaklı ve kullanıcı dostu arayüzler geliştiriyorum.
+          Piksel hassasiyetinde, mobil uyumlu tasarımlarla projelere değer
+          katmayı hedefliyorum. UI/UX hassasiyetimle birlikte freelance
+          projelerde üretmeye devam ediyorum.
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="bg-gray-800 p-6 rounded-xl shadow-lg"
-        >
-          <span className="text-4xl font-bold">25+</span>
-          <p className="text-sm text-gray-400">Tamamlanan Proje</p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="bg-gray-800 p-6 rounded-xl shadow-lg"
-        >
-          <span className="text-4xl font-bold">100%</span>
-          <p className="text-sm text-gray-400">Müşteri Memnuniyeti</p>
-        </motion.div>
-      </div>
+        <ul className="text-gray-300 space-y-3 text-sm sm:text-base list-disc pl-5">
+          <li>🔥 3+ yıl front-end geliştirme deneyimi</li>
+          <li>💼 25+ tamamlanan freelance ve kurumsal proje</li>
+          <li>🎯 Piksel hassasiyetli ve mobil uyumlu kodlama</li>
+          <li>💡 Kullanıcı odaklı UI/UX tasarım yaklaşımları</li>
+          <li>🚀 React, jQuery ve Vanilla JavaScript hâkimiyeti</li>
+        </ul>
+      </motion.div>
     </section>
   );
 };

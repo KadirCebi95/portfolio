@@ -1,58 +1,38 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <section className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16">
-      {/* Sol: Foto */}
-      <motion.div
-        initial={{ opacity: 0, x: -40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
-        className="mb-8 md:mb-0 md:mr-12"
-      >
-        <img
-          src="/img/profile.jpg"
-          alt="Kadir Çebi"
-          className="w-64 h-64 rounded-3xl object-cover border-4 border-yellow-400 shadow-[0_0_40px_rgba(251,191,36,0.4)] transition-transform duration-500 hover:scale-105"
-        />
-      </motion.div>
+    <section className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 bg-[#0B0E17]">
+      <div className="md:w-1/2 flex justify-center items-center mb-10 md:mb-0">
+        <div className="rounded-[40px] overflow-hidden shadow-2xl max-w-xs sm:max-w-sm md:max-w-md">
+          <img
+            src="/img/profile.jpg"
+            alt="profil"
+            className="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
 
-      {/* Sağ: Yazı */}
-      <motion.div
-        initial={{ opacity: 0, x: 40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-center md:text-left max-w-xl"
-      >
-        <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-          Ben <span className="text-yellow-400">Kadir Çebi</span>
+      <div className="md:w-1/2 text-center md:text-left">
+        <h1 className="text-4xl sm:text-5xl md:text-[64px] font-light leading-tight bg-gradient-to-b from-white to-[#696969] bg-clip-text text-transparent">
+          Ben Kadir Çebi,<br />
+          Frontend Developer
         </h1>
-        <h2 className="text-xl sm:text-2xl mb-4">
-          Frontend Developer & UI Kodlayıcı
-        </h2>
-        <p className="text-gray-300 mb-6">
-          React, JavaScript ve jQuery ile modern, kullanıcı dostu arayüzler geliştiriyorum.
-          Pixel-perfect tasarımlar, hızlı ve erişilebilir deneyimler oluşturuyorum.
+
+        <p className="mt-6 text-lg sm:text-xl text-gray-300">
+          React ve modern web teknolojileriyle hızlı, erişilebilir ve kullanıcı dostu arayüzler geliştiriyorum.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+        <div className="mt-10">
           <a
-            href="/cv-kadir-cebi.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold transition duration-300"
+            href="/cv.docx"
+            download
+            className="bg-[#e8ff00] hover:bg-[#c8da00] text-black font-semibold py-3 px-6 rounded-full transition duration-300 inline-flex items-center"
           >
-            📄 CV'yi İndir
-          </a>
-          <a
-            href="/projects"
-            className="border border-yellow-400 hover:bg-yellow-400 hover:text-black text-yellow-400 px-6 py-3 rounded-full font-semibold transition duration-300"
-          >
-            👀 Projelerime Göz At
+            <span className="mr-2">⬇</span> CV’yi indir
           </a>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

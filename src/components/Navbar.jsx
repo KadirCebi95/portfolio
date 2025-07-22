@@ -41,7 +41,6 @@ const Navbar = () => {
       <AnimatePresence>
         {open && (
           <>
-            {/* Overlay */}
             <motion.div
               className="fixed inset-0 bg-black bg-opacity-50 z-40"
               initial={{ opacity: 0 }}
@@ -50,7 +49,6 @@ const Navbar = () => {
               onClick={() => setOpen(false)}
             />
 
-            {/* Side Menü */}
             <motion.div
               className="fixed top-0 right-0 w-64 h-full bg-gray-900 z-50 p-6 shadow-lg"
               initial={{ x: "100%" }}
